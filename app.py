@@ -2,6 +2,7 @@ from flask import Flask
 from partidos import partidos_db
 from usuarios import usuarios_db
 from ranking import ranking_bp
+from ranking import ramking_bp
 
 app= Flask(__name__)
 
