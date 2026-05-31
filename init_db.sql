@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 CREATE TABLE Predicciones(
-    id_fixture VARCHAR(250),
+    id_fixture BOOLEAN,
     id_usuario INT,
     goles_local BOOLEAN,
     goles_visitante VARCHAR(30),
