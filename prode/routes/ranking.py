@@ -13,3 +13,15 @@ def obtener_ranking():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+ef respuesta_error(code, message, description, level = 'error'):
+    return jsonify({
+        "errors" : [
+            {
+                "code" : str(code),
+                "message" : message,
+                "level" : level,
+                "description" : description
+            }
+        ]
+    }), code

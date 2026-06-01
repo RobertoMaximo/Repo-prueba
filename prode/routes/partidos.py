@@ -54,30 +54,11 @@ def predecir_partido(id_fixture):
     
 #Si se manda la solicitud correctamente
 
-    cursor.execute("""
-                   INSERT INTO Predicciones (id_fixture, id_usuario, goles_local, goles_visitante)
-                   VALUES (%s, %s, %s, %s)
-                   """, (id_fixture, id_usuario, goles_local, goles_visitante))
     
-    
-    conn.commit()
-    cursor.close()
-    conn.close()
     
     return ('Prediccion agregada correctamente'), 201
 
 
-def respuesta_error(code, message, description, level = 'error'):
-    return jsonify({
-        "errors" : [
-            {
-                "code" : str(code),
-                "message" : message,
-                "level" : level,
-                "description" : description
-            }
-        ]
-    }), code
 @usuarios_db.route("/<id>", methods=["PUT"])
 def reemplazar_usuario(id):
     try:
