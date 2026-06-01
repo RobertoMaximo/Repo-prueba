@@ -78,9 +78,9 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 CREATE TABLE Predicciones(
-    id_fixture BOOLEAN,
-    id_usuario INT,
-    goles_local BOOLEAN,
+    id_fixture INT,
+    id_usuario int,
+    goles_local INT,
     goles_visitante VARCHAR(30),
     FOREIGN KEY (id_fixture) REFERENCES fixture(id_fixture) ON DELETE CASCADE
 );
